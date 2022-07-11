@@ -1,1 +1,10 @@
 <h2>Products</h2>
+<button type="button" (click)="share()">Notify Me</button>
+<div *ngFor="let product of porductss">
+  <h3>
+    {{ product.id }}
+    {{ product.name }}
+    {{ product.price }}
+    {{ product.description }}
+  </h3>
+</div>

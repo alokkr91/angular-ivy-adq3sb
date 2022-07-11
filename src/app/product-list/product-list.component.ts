@@ -7,9 +7,9 @@ import { products } from '../product';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-  porducts = products;
+  porductss = products;
 
   share() {
-    window.alert('The product has been shared!');
+    window.alert(JSON.stringify(this.porductss));
   }
 }

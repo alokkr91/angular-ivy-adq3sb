@@ -18,11 +18,13 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path:'products/:productId', component:ProductDetailsComponent},
-]),
+      {
+        path: 'products/:productId & :price',
+        component: ProductDetailsComponent,
+      },
+    ]),
     MatIconModule,
     MatButtonModule,
-
   ],
 
   declarations: [
@@ -31,6 +33,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
+    ProductDetailsComponent,
   ],
   bootstrap: [AppComponent],
 })

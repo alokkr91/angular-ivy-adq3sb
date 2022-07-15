@@ -22,6 +22,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
         path: 'products/:productId',
         component: ProductDetailsComponent,
       },
+      
     ]),
     MatIconModule,
     MatButtonModule,

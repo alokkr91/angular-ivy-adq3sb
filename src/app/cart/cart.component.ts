@@ -4,7 +4,7 @@ import { CartService } from '../cart.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css'],  
+  styleUrls: ['./cart.component.css'],
 })
 // export class CartComponent implements OnInit {
 //   constructor(private cartService: CartService) {}
@@ -14,11 +14,7 @@ import { CartService } from '../cart.service';
 //   }
 // }
 export class CartComponent implements OnInit {
-  constructor(private cartService1: CartService) {
-    window.alert(JSON.stringify(this.cartService1.getItems()));
-  }
+  constructor(private cartService1: CartService) {}
   items = this.cartService1.getItems();
-  ngOnInit() {
-    window.alert(JSON.stringify(this.cartService1.getItems()));
-  }
+  ngOnInit() {}
 }

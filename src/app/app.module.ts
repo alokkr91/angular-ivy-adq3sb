@@ -12,8 +12,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
-import {CartService} from './cart.service'
-
+import { CartService } from './cart.service';
+import { ShippingComponent } from './shipping/shipping.component';
+//import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -26,9 +27,11 @@ import {CartService} from './cart.service'
         component: ProductDetailsComponent,
       },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ]),
     MatIconModule,
     MatButtonModule,
+    // HttpClientModule,
   ],
 
   declarations: [
@@ -39,8 +42,9 @@ import {CartService} from './cart.service'
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent,
   ],
   bootstrap: [AppComponent],
-  providers:[CartService]
+  providers: [CartService],
 })
 export class AppModule {}

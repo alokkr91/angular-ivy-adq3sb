@@ -8,7 +8,7 @@ import { CartService } from '../cart.service';
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css'],
-  providers: [CartService],
+  //providers: [CartService],
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;

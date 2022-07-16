@@ -14,7 +14,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { CartService } from './cart.service';
 import { ShippingComponent } from './shipping/shipping.component';
-//import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -31,7 +31,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     ]),
     MatIconModule,
     MatButtonModule,
-    // HttpClientModule,
+    HttpClientModule,
   ],
 
   declarations: [

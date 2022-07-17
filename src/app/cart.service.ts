@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class CartService {
@@ -16,11 +18,23 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-  constructor(private http: HttpClient) {}
-  //itmArray:{type:string,price:number}[]=[];
-  getShippingPrice() {
-    return this.http.get<{ type: string; price: number }[]>(
-      '/assets/shipping.json'
-    );
+  constructor(private http: HttpClient) {
+    this.getJSON().subscribe((data) => {
+      console.log(data);
+    });
   }
+
+  public getJSON(): Observable<any> {
+    return this.http.get('./assets/shipping.json');
+  }
+  // getShippingPrice() {
+  //     return this.http.get<any>('assets/shipping.json',this.httpOptions);
+  //   }
+  //itmArray:{type:string,price:number}[]=[];
+  // getShippingPrice() {
+  //   return this.http.get<any>('assets/shipping.json');
+  //   // return this.http
+  //   // .get('assets/characters.json')
+  //   // .pipe(map(charactersData => charactersData['data']));
+  // }
 }
